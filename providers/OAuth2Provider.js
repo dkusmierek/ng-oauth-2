@@ -40,7 +40,7 @@ ngOAuth2.provider('OAuth2', function Oauth2Provider() {
     this.$get = ['$http', 'QueryStringService', 'OAuthSessionService',
         function ($http, QueryStringService, OAuthSessionService) {
             function authenticate(username, password) {
-                $http.post(config.baseUrl + config.grantPath, QueryStringService.encode({
+                return $http.post(config.baseUrl + config.grantPath, QueryStringService.encode({
                         client_id: config.clientId,
                         client_secret: config.clientSecret,
                         grant_type: config.grantType,
