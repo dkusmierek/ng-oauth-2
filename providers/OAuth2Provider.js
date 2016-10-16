@@ -4,6 +4,7 @@ ngOAuth2.provider('OAuth2', function Oauth2Provider() {
         baseUrl: null,
         grantPath: null,
         refreshPath: null,
+        revokePath: null,
         clientId: null,
         clientSecret: null,
         grantType: 'password'
@@ -19,6 +20,10 @@ ngOAuth2.provider('OAuth2', function Oauth2Provider() {
 
     this.setRefreshPath = function (refreshPath) {
         config.refreshPath = refreshPath;
+    };
+
+    this.setRevokePath = function (revokePath) {
+        config.revokePath = revokePath;
     };
 
     this.setClientId = function (clientId) {
@@ -54,13 +59,29 @@ ngOAuth2.provider('OAuth2', function Oauth2Provider() {
                     });
             }
 
+            function revokeToken() {
+                var session = OAuthSessionService.get();
+
+                return $http.post(config.baseUrl + config.revokePath, QueryStringService.encode({
+                        client_id: config.clientId,
+                        client_secret: config.clientSecret,
+                        token: session.access_token
+                    }))
+                    .success(function(response, status) {
+                        if (status === 200) {
+                            OAuthSessionService.clear();
+                        }
+                    });
+            }
+
             function refreshToken() {
                 // To do
             }
 
             return {
                 authenticate: authenticate,
-                refreshToken: refreshToken
+                refreshToken: refreshToken,
+                revokeToken: revokeToken
             }
         }];
 });

@@ -9,9 +9,7 @@ ngOAuth2.factory('OAuthSessionService', function() {
     }
 
     function get() {
-        var session = JSON.parse(sessionStorage.getItem('oauth_session')) || undefined;
-
-        return session;
+        return JSON.parse(sessionStorage.getItem('oauth_session')) || undefined;
     }
 
     function clear() {
