@@ -75,13 +75,31 @@ ngOAuth2.provider('OAuth2', function Oauth2Provider() {
             }
 
             function refreshToken() {
-                // To do
+                var session = OAuthSessionService.get();
+
+                return $http.post(config.baseUrl + config.grantPath, QueryStringService.encode({
+                        client_id: config.clientId,
+                        client_secret: config.clientSecret,
+                        grant_type: 'refresh_token',
+                        refresh_token: session.refresh_token
+                    }))
+                    .success(function(response, status) {
+                        console.log(response);
+                        if (status === 200) {
+                            OAuthSessionService.create(response);
+                        }
+                    });
+            }
+
+            function getConfig() {
+                return config;
             }
 
             return {
                 authenticate: authenticate,
                 refreshToken: refreshToken,
-                revokeToken: revokeToken
+                revokeToken: revokeToken,
+                getConfig: getConfig
             }
         }];
 });
