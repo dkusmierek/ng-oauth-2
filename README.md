@@ -7,6 +7,8 @@ other libraries, which not always works correctly.
 
 Finally I decided that I share a simple module on github.
 
+Tested with https://github.com/PhilipGarnero/django-rest-framework-social-oauth2
+
 ## Configuration
 
 Module configuration is very simple thanks to the possibilities offered by providers from AngularJS.
