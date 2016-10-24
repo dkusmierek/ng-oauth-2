@@ -9,6 +9,18 @@ Finally I decided that I share a simple module on github.
 
 Tested with https://github.com/PhilipGarnero/django-rest-framework-social-oauth2
 
+## Installation
+
+**Include ng-oauth-2**
+```html
+<script src="<your place>/ng-oauth-2/dist/ng-oauth2-min.js"></script>
+```
+
+**Enable module in AngularJS**
+```javascript
+var app = angular.module('app', ['ngOAuth2']);
+```
+
 ## Configuration
 
 Module configuration is very simple thanks to the possibilities offered by providers from AngularJS.
