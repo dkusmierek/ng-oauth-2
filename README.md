@@ -12,13 +12,13 @@ Finally I decided that I share a simple module on github.
 Module configuration is very simple thanks to the possibilities offered by providers from AngularJS.
 
 Information, which we will need to the correct configuration:
-&nbsp;&nbsp;&nbsp;&nbsp;•	baseUrl
-&nbsp;&nbsp;&nbsp;&nbsp;•	grantPath
-&nbsp;&nbsp;&nbsp;&nbsp;•	refreshPath
-&nbsp;&nbsp;&nbsp;&nbsp;•	revokePath
-&nbsp;&nbsp;&nbsp;&nbsp;•	clientId
-&nbsp;&nbsp;&nbsp;&nbsp;•	clientSecret
-&nbsp;&nbsp;&nbsp;&nbsp;•	grantType (default: ‘password’)
+&nbsp;&nbsp;&nbsp;&nbsp;*	baseUrl
+&nbsp;&nbsp;&nbsp;&nbsp;*	grantPath
+&nbsp;&nbsp;&nbsp;&nbsp;*	refreshPath
+&nbsp;&nbsp;&nbsp;&nbsp;*	revokePath
+&nbsp;&nbsp;&nbsp;&nbsp;*	clientId
+&nbsp;&nbsp;&nbsp;&nbsp;*	clientSecret
+&nbsp;&nbsp;&nbsp;&nbsp;*	grantType (default: ‘password’)
 
 If we have every needed information we may start create configuration
 
