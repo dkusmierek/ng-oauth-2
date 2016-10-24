@@ -16,7 +16,7 @@
     "url": "git+ssh://git@github.com:dkusmierek/ng-oauth-2.git"
   },
   "author": "Dawid Kuśmierek",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/dkusmierek/ng-oauth-2#readme",
   "dependencies": {
     "strip-bom": "^3.0.0"
