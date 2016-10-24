@@ -1,6 +1,6 @@
 # ng-oauth-2
 
-Ng-oauth-2 is the module allows to authenticate users on the OAuth2 server in the application, which are wrote in AngularJS.
+Ng-oauth-2 is the module allows to authenticate users on the OAuth2 server in the application, which were written in AngularJS.
 
 Module was created for private purposes due to all modules, which are currently available had many dependencies from
 other libraries, which not always works correctly.
