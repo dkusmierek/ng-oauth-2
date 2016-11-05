@@ -84,7 +84,6 @@ ngOAuth2.provider('OAuth2', function Oauth2Provider() {
                         refresh_token: session.refresh_token
                     }))
                     .success(function(response, status) {
-                        console.log(response);
                         if (status === 200) {
                             OAuthSessionService.create(response);
                         }
