@@ -118,7 +118,7 @@ ngOAuth2.service('QueryStringService', function () {
             result += key + "=" + value + "&";
         });
 
-        return result;
+        return result.substring(0, result.length - 1);
     };
 
     this.decode = function (string) {
